@@ -28,9 +28,18 @@ public class Classroom {
         return students;
     }
 
-    public void setStudents(Map<Integer, Student> students) {
-        this.students = students;
+    //Returns a List if need be.
+    public List<Student> getStudentsList() {
+        List<Student> temp = new ArrayList<Student>();
+        for(Map.Entry<Integer, Student> entry : students.entrySet() ) {
+            temp.add(entry.getValue());
+        }
+        return temp;
     }
+
+//    public void setStudents(Map<Integer, Student> students) {
+//        this.students = students;
+//    }
 
     public void addStudent(Student s)
     {
